@@ -16,7 +16,6 @@ class RsyncDaemon {
     static main(args) {
         def controller = new UserController()
         def daemon = new RsyncDaemon()
-        println("pwd".execute().text)
         daemon.userController = controller
         
         daemon.sync()

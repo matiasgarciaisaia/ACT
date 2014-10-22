@@ -10,6 +10,9 @@
 // Apply the groovy plugin to add support for Groovy
 apply plugin: 'groovy'
 apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = "org.instedd.act.misc.RsyncDaemon"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
