@@ -1,6 +1,7 @@
 package org.instedd.act.controllers
 
 import org.instedd.act.models.User
+import org.instedd.act.misc.UserExport
 
 class UserController {
     
@@ -11,7 +12,9 @@ class UserController {
     }
     
     def create(params) {
-        users.add(new User(params.organization, params.location))
+        def user = new User(params.organization, params.location)
+        UserExport.write(user)
+        users.add(user)
     }
 
 }
