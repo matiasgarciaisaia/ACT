@@ -12,6 +12,12 @@ apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
+allprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.5
+    targetCompatibility = 1.5
+}
+
 mainClassName = "org.instedd.act.misc.RsyncDaemon"
 
 // In this section you declare where to find the dependencies of your project
